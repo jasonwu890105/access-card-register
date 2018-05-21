@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title> Data Collector App</title>
+  <head>
+    <link href="../static/main.css" rel="stylesheet">
+  </head>
+    <body>
+      <div class="container">
+        <h1>Card Register</h1>
+        <h3><a href="http://skynet.mgt.aapt.com.au/find_person.php">Find Your T Number Here</a></h3>
+        <!-- <div class="email"> {{text | safe}} </div> -->
+      <div class="error_message">
+        {{text | safe}}
+      </div>
+        <form action="{{url_for('success')}}" method="POST">
+          <input title="Your email will be safe with us" placeholder="Enter your email address" type="email" name="email_name" required> <br>
+          <input title="Your data will be safe with us" placeholder="Enter your T number" type="text" name="t_number" required> <br>
+          <input title="Your email will be safe with us" placeholder="Enter your fullname" type="text" name="full_name" required> <br>
+          <button type="submit"> Submit </button>
+        </form>
+      </div>
+    </body>
+</html>
